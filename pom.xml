@@ -77,16 +77,16 @@
             <artifactId>aliyun-java-sdk-core</artifactId>
             <version>4.5.28</version> <!-- 建议使用最新版本 -->
         </dependency>
-        <!-- 阿里云实时语音识别 SDK -->
-        <dependency>
-            <groupId>com.alibaba.nls</groupId>
-            <artifactId>nls-sdk-transcriber</artifactId>
-            <version>2.2.1</version>
-        </dependency>
+        <!-- 百度云语音识别 SDK -->
         <dependency>
             <groupId>com.baidu.aip</groupId>
             <artifactId>java-sdk</artifactId>
             <version>4.15.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.qcloud</groupId>
+            <artifactId>cos_api</artifactId>
+            <version>5.6.227</version>
         </dependency>
         <!-- websocket -->
         <dependency>
