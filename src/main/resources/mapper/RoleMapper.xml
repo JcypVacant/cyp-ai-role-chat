@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cyp.cypairolechat.mapper.RoleMapper">
+
+    <resultMap id="BaseResultMap" type="com.cyp.cypairolechat.model.entity.Role">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="roleName" column="roleName" jdbcType="VARCHAR"/>
+            <result property="cover" column="cover" jdbcType="VARCHAR"/>
+            <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="systemPrompt" column="systemPrompt" jdbcType="VARCHAR"/>
+            <result property="category" column="category" jdbcType="VARCHAR"/>
+            <result property="ttsVoice" column="ttsVoice" jdbcType="VARCHAR"/>
+            <result property="priority" column="priority" jdbcType="INTEGER"/>
+            <result property="userId" column="userId" jdbcType="BIGINT"/>
+            <result property="editTime" column="editTime" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,roleName,cover,
+        description,systemPrompt,category,
+        ttsVoice,priority,userId,
+        editTime,createTime,updateTime,
+        isDelete
+    </sql>
+</mapper>
