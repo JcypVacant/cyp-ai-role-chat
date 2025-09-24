@@ -8,6 +8,10 @@ spring:
     password: 1234
   profiles:
     active: local
+  servlet:
+    multipart:
+      max-file-size: 10MB  # 单个文件最大大小
+      max-request-size: 10MB  # 整个请求最大大小
 server:
   port: 8121
   servlet:

@@ -20,7 +20,8 @@ public class ChatController {
      * 上传音频并进行对话
      */
     @PostMapping("/voice")
-    public BaseResponse<String> chatByVoice(@RequestParam("file") MultipartFile file) {
-        return ResultUtils.success(chatPipelineService.handleVoiceChat(file));
+    public BaseResponse<String> chatByVoice(@RequestParam("file") MultipartFile file,@RequestParam("roleId") Long roleId,
+                                            @RequestParam("userId") Long userId) {
+        return ResultUtils.success(chatPipelineService.handleVoiceChat(file, userId, roleId));
     }
 }
