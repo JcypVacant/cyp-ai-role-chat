@@ -3,6 +3,7 @@ import HomePage  from '@/pages/HomePage.vue'
 import UserLoginPage from '@/pages/user/UserLoginPage.vue'
 import UserManagePage from '@/pages/admin/UserManagePage.vue'
 import UserRegisterPage from '@/pages/user/UserRegisterPage.vue'
+import RoleChatPage from '@/pages/RoleChatPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,12 @@ const router = createRouter({
       name: '用户管理',
       component: UserManagePage,
     },
+    {
+      path: '/role/chat/:id',
+      name: 'RoleChat',
+      component: RoleChatPage,
+    }
+
   ],
 
 })

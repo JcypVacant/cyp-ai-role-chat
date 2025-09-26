@@ -1,7 +1,7 @@
 package com.cyp.cypairolechat.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.cyp.cypairolechat.model.dto.UserQueryRequest;
+import com.cyp.cypairolechat.model.dto.user.UserQueryRequest;
 import com.cyp.cypairolechat.model.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.cyp.cypairolechat.model.vo.LoginUserVO;

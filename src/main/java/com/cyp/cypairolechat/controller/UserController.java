@@ -10,7 +10,7 @@ import com.cyp.cypairolechat.constant.UserConstant;
 import com.cyp.cypairolechat.exception.BusinessException;
 import com.cyp.cypairolechat.exception.ErrorCode;
 import com.cyp.cypairolechat.exception.ThrowUtils;
-import com.cyp.cypairolechat.model.dto.*;
+import com.cyp.cypairolechat.model.dto.user.*;
 import com.cyp.cypairolechat.model.entity.User;
 import com.cyp.cypairolechat.model.vo.LoginUserVO;
 import com.cyp.cypairolechat.model.vo.UserVO;

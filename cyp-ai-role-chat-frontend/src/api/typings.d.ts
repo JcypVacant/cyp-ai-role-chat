@@ -17,6 +17,12 @@ declare namespace API {
     message?: string
   }
 
+  type BaseResponsePageRoleVO = {
+    code?: number
+    data?: PageRoleVO
+    message?: string
+  }
+
   type BaseResponsePageUserVO = {
     code?: number
     data?: PageUserVO
@@ -39,6 +45,11 @@ declare namespace API {
     code?: number
     data?: UserVO
     message?: string
+  }
+
+  type chatByVoiceParams = {
+    roleId: number
+    userId: number
   }
 
   type DeleteRequest = {
@@ -70,6 +81,20 @@ declare namespace API {
     asc?: boolean
   }
 
+  type PageRoleVO = {
+    records?: RoleVO[]
+    total?: number
+    size?: number
+    current?: number
+    orders?: OrderItem[]
+    optimizeCountSql?: PageRoleVO
+    searchCount?: PageRoleVO
+    optimizeJoinOfCountSql?: boolean
+    maxLimit?: number
+    countId?: string
+    pages?: number
+  }
+
   type PageUserVO = {
     records?: UserVO[]
     total?: number
@@ -82,6 +107,28 @@ declare namespace API {
     maxLimit?: number
     countId?: string
     pages?: number
+  }
+
+  type RoleQueryRequest = {
+    current?: number
+    pageSize?: number
+    sortField?: string
+    sortOrder?: string
+    id?: number
+    roleName?: string
+    category?: string
+    userId?: number
+    description?: string
+  }
+
+  type RoleVO = {
+    id?: number
+    roleName?: string
+    cover?: string
+    description?: string
+    category?: string
+    priority?: number
+    userId?: number
   }
 
   type User = {

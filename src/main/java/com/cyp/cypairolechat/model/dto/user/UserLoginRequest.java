@@ -1,4 +1,4 @@
-package com.cyp.cypairolechat.model.dto;
+package com.cyp.cypairolechat.model.dto.user;
 
 import lombok.Data;
 

@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.cyp.cypairolechat.constant.UserConstant;
 import com.cyp.cypairolechat.exception.BusinessException;
 import com.cyp.cypairolechat.exception.ErrorCode;
-import com.cyp.cypairolechat.model.dto.UserQueryRequest;
+import com.cyp.cypairolechat.model.dto.user.UserQueryRequest;
 import com.cyp.cypairolechat.model.entity.User;
 import com.cyp.cypairolechat.model.enums.UserRoleEnum;
 import com.cyp.cypairolechat.model.vo.LoginUserVO;
