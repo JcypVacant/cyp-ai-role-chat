@@ -1,10 +1,10 @@
 package com.cyp.cypairolechat.baiduyun;
 
+import com.cyp.cypairolechat.service.impl.DynamicAiRoleChatService;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class DynamicAiRoleChatServiceTest {
 

@@ -42,6 +42,12 @@ public class RoleController {
         Page<RoleVO> roleVOPage = roleService.getRoleVOPage(rolePage);
         return ResultUtils.success(roleVOPage);
     }
+    /**
+     * 根据 id 获取角色
+     *
+     * @param roleId 角色 id
+     * @return 角色
+     */
     @GetMapping("/get")
     public BaseResponse<Role> getRoleById(@RequestParam("roleId") Long roleId) {
         Role role = roleService.getById(roleId);

@@ -1,13 +1,12 @@
-package com.cyp.cypairolechat.baiduyun;
+package com.cyp.cypairolechat.service.impl;
 
-import com.cyp.cypairolechat.ai.AiRoleChatService;
+import com.cyp.cypairolechat.baiduyun.AsrService;
+import com.cyp.cypairolechat.baiduyun.TtsService;
 import com.cyp.cypairolechat.manager.CosManager;
 import com.cyp.cypairolechat.model.entity.ChatHistory;
 import com.cyp.cypairolechat.service.ChatHistoryService;
 import jakarta.annotation.Resource;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -19,9 +18,9 @@ import java.util.UUID;
 @Slf4j
 public class ChatPipelineService {
     @Resource
-    private  AsrService asrService;
+    private AsrService asrService;
     @Resource
-    private  TtsService ttsService;
+    private TtsService ttsService;
     @Resource
     private  CosManager cosManager;
     @Resource

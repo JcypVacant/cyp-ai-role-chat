@@ -1,4 +1,4 @@
-package com.cyp.cypairolechat.baiduyun;
+package com.cyp.cypairolechat.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.cyp.cypairolechat.ai.AiRoleChatService;

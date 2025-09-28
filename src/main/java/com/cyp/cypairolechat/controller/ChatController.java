@@ -2,7 +2,7 @@ package com.cyp.cypairolechat.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.cyp.cypairolechat.baiduyun.ChatPipelineService;
+import com.cyp.cypairolechat.service.impl.ChatPipelineService;
 import com.cyp.cypairolechat.common.BaseResponse;
 import com.cyp.cypairolechat.common.ResultUtils;
 import com.cyp.cypairolechat.model.entity.ChatHistory;
@@ -27,6 +27,9 @@ public class ChatController {
                                             @RequestParam("userId") Long userId) {
         return ResultUtils.success(chatPipelineService.handleVoiceChat(file, userId, roleId));
     }
+    /**
+     * 获取聊天语音历史
+     */
     @GetMapping("/history")
     public BaseResponse<Page<ChatHistory>> getChatHistory(
             @RequestParam("roleId") Long roleId,
@@ -45,7 +48,6 @@ public class ChatController {
                         .eq(ChatHistory::getIsDelete, 0)
                         .orderByAsc(ChatHistory::getCreateTime)
         );
-
         return ResultUtils.success(resultPage);
     }
 }
