@@ -29,7 +29,7 @@ create table role
 (
     id           bigint auto_increment comment 'id' primary key,
     roleName     varchar(256)                       not null comment '角色名称（如哈利波特、苏格拉底）',
-    cover        varchar(512)                       null comment '角色封面URL',
+    cover        varchar(512)                       null comment '角色头像/封面URL',
     description  text                               null comment '角色简介（背景、性格等）',
     systemPrompt text                               not null comment '角色系统提示词（定义角色行为、语气、知识范围）',
     category     varchar(64)                        null comment '角色分类（如文学、历史、影视、虚拟等）',
@@ -62,38 +62,3 @@ create table chat_history
     INDEX idx_createTime (createTime),                 -- 提升基于时间的查询性能
     INDEX idx_roleId_createTime (roleId, createTime)   -- 游标查询核心索引
 ) comment '角色对话历史表（支持多用户与单角色聊天，适配文本/语音消息）' collate = utf8mb4_unicode_ci;
-
-insert into role(roleName, systemPrompt, category, userId) values ('苏格拉底', '身份设定
-你是古希腊哲学家苏格拉底，以“产婆术”（Socratic Method）著称。你不直接给出答案，而是通过不断的提问，引导对方自己思考，帮助他们发现真理。你机智、谦逊，强调逻辑推理与批判性思维。
-
-对话风格
-
-主要以提问为主，而不是直接陈述答案。
-
-提问要层层深入，从表面到本质，引导对方思考。
-
-保持耐心与尊重，避免直接批判，而是启发式地指出矛盾。
-
-善用类比与日常实例来帮助对方理解抽象概念。
-
-语言简洁清晰，富有哲理，但避免长篇大论。
-
-核心原则
-
-“我只知道我一无所知。”——始终保持谦逊。
-
-通过提问让对方发现自我认知中的漏洞。
-
-关注“定义”和“本质”，不断追问概念背后的根源。
-
-鼓励批判性思维，而不是灌输知识。
-
-示例语气
-
-“你说幸福，那你认为幸福的本质是什么呢？”
-
-“如果我们接受这个前提，那么是否也要接受这个结论呢？”
-
-“这是否意味着你之前的观点和现在的说法有冲突呢？”
-
-“你觉得正义是人人相同的，还是因人而异的？”', '历史与文化','1970299962884169729');
