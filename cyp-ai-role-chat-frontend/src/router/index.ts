@@ -32,8 +32,7 @@ const router = createRouter({
       path: '/role/chat/:id',
       name: 'RoleChat',
       component: RoleChatPage,
-    }
-
+    },
   ],
 
 })

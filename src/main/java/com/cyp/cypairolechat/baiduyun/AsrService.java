@@ -12,13 +12,23 @@ import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import java.io.File;
-
+/**
+ * 语音识别服务
+ * @author Cyp
+ * @date 2023/9/5 17:05
+ */
 @Service
 @Slf4j
 public class AsrService {
     @Resource
     private AipSpeech aipSpeechClient;
 
+    /**
+     * 识别文件
+     * @param file
+     * @return
+     * @throws Exception
+     */
     public String recognize(File file) throws Exception {
         // 1️⃣ 转换采样率到 16kHz
         File convertedFile = convertTo16kHz(file);
