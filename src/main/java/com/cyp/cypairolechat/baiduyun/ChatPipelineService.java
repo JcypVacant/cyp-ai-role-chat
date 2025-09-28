@@ -7,6 +7,7 @@ import com.cyp.cypairolechat.service.ChatHistoryService;
 import jakarta.annotation.Resource;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -27,6 +28,7 @@ public class ChatPipelineService {
     private DynamicAiRoleChatService dynamicAiRoleChatService;
     @Resource
     private ChatHistoryService chatHistoryService;
+
 
     public String handleVoiceChat(MultipartFile file, Long userId, Long roleId) {
         try {

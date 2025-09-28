@@ -17,6 +17,12 @@ declare namespace API {
     message?: string
   }
 
+  type BaseResponsePageChatHistory = {
+    code?: number
+    data?: PageChatHistory
+    message?: string
+  }
+
   type BaseResponsePageRoleVO = {
     code?: number
     data?: PageRoleVO
@@ -26,6 +32,12 @@ declare namespace API {
   type BaseResponsePageUserVO = {
     code?: number
     data?: PageUserVO
+    message?: string
+  }
+
+  type BaseResponseRole = {
+    code?: number
+    data?: Role
     message?: string
   }
 
@@ -52,8 +64,32 @@ declare namespace API {
     userId: number
   }
 
+  type ChatHistory = {
+    id?: number
+    message?: string
+    messageType?: string
+    messageFormat?: string
+    voiceUrl?: string
+    roleId?: number
+    userId?: number
+    createTime?: string
+    updateTime?: string
+    isDelete?: number
+  }
+
   type DeleteRequest = {
     id?: number
+  }
+
+  type getChatHistoryParams = {
+    roleId: number
+    userId: number
+    current?: number
+    pageSize?: number
+  }
+
+  type getRoleByIdParams = {
+    roleId: number
   }
 
   type getUserByIdParams = {
@@ -79,6 +115,20 @@ declare namespace API {
   type OrderItem = {
     column?: string
     asc?: boolean
+  }
+
+  type PageChatHistory = {
+    records?: ChatHistory[]
+    total?: number
+    size?: number
+    current?: number
+    orders?: OrderItem[]
+    optimizeCountSql?: PageChatHistory
+    searchCount?: PageChatHistory
+    optimizeJoinOfCountSql?: boolean
+    maxLimit?: number
+    countId?: string
+    pages?: number
   }
 
   type PageRoleVO = {
@@ -107,6 +157,22 @@ declare namespace API {
     maxLimit?: number
     countId?: string
     pages?: number
+  }
+
+  type Role = {
+    id?: number
+    roleName?: string
+    cover?: string
+    description?: string
+    systemPrompt?: string
+    category?: string
+    ttsVoice?: string
+    priority?: number
+    userId?: number
+    editTime?: string
+    createTime?: string
+    updateTime?: string
+    isDelete?: number
   }
 
   type RoleQueryRequest = {

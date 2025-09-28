@@ -11,10 +11,7 @@ import com.cyp.cypairolechat.model.entity.Role;
 import com.cyp.cypairolechat.model.vo.RoleVO;
 import com.cyp.cypairolechat.service.RoleService;
 import jakarta.annotation.Resource;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/role")
@@ -45,4 +42,10 @@ public class RoleController {
         Page<RoleVO> roleVOPage = roleService.getRoleVOPage(rolePage);
         return ResultUtils.success(roleVOPage);
     }
+    @GetMapping("/get")
+    public BaseResponse<Role> getRoleById(@RequestParam("roleId") Long roleId) {
+        Role role = roleService.getById(roleId);
+        return ResultUtils.success(role);
+    }
+
 }
